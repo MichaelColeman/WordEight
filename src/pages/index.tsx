@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-      <header>
-        <h2 className="text-color-correct">Header</h2>
+      <header className="h-16 border-2 text-white">
+        <h1 className="text-white">AARDVARK</h1>
       </header>
       <main className={`${inter.className}`}>yo</main>
     </>
