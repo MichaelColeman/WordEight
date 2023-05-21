@@ -1,13 +1,14 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Inter, Hepta_Slab } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const heptaSlab = Hepta_Slab({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-      <header className="h-16 border-2 text-white">
-        <h1 className="text-white">AARDVARK</h1>
+      <header className="h-16 border-b-2 flex items-center justify-center">
+        <h1 className={`text-2xl font-semibold text-white ${heptaSlab.className}`}>AARDVARK</h1>
       </header>
       <main className={`${inter.className}`}>yo</main>
     </>
