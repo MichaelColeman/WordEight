@@ -1,13 +1,13 @@
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import Board from "../components/Board";
-import Keyboard from "../components/Keyboard";
+import Aardvark from "@/components/Aardvark";
 
 export default function Home() {
+  const [solution, setSolution] = useState<string>("yo");
   return (
     <>
       <Header />
-      <Board />
-      <Keyboard />
+      <Aardvark solution={solution} />
     </>
   );
 }
