@@ -2,7 +2,7 @@ import React from "react";
 import Board from "./Board";
 import Keyboard from "./Keyboard";
 
-type solutionProps = {
+interface solutionProps {
   solution: string;
 };
 
