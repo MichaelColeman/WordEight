@@ -7,7 +7,7 @@ export default function useGameLogic() {
   const [guessHistory, setGuessHistory] = useState<string[]>([]); //array of strings
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
 
-  //returns true if guess is a ccorrectly spelled word
+  //returns true if guess is a correctly spelled word
   const validateGuess = (guess: string): boolean => {
     return true;
   };
