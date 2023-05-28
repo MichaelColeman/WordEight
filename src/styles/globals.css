@@ -21,5 +21,6 @@
 @layer base {
   body {
     background-color: #121213;
+    color: whitesmoke;
   }
 }
