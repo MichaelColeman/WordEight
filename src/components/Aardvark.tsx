@@ -8,7 +8,8 @@ interface solutionProps {
 }
 
 const Aardvark: React.FunctionComponent<solutionProps> = ({ solution }) => {
-  const { currentGuess, handleKeyboardInput } = useGameLogic({ solution });
+  const { currentGuess, handleKeyboardInput, formattedGuesses, turn } =
+    useGameLogic({ solution });
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyboardInput);
@@ -18,8 +19,12 @@ const Aardvark: React.FunctionComponent<solutionProps> = ({ solution }) => {
 
   return (
     <>
-      <div className="text-2xl text-green-500">{solution}</div>
       <div className="text-xl text-blue-500">{currentGuess}</div>
+      <Board
+        currentGuess={currentGuess}
+        formattedGuesses={formattedGuesses}
+        turn={turn}
+      />
     </>
   );
 };

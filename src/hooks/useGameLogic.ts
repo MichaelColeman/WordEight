@@ -2,11 +2,16 @@ import { useState } from "react";
 
 type solutionArray = (string | null)[];
 
+interface formattedGuesses {
+  letter?: string;
+  result?: string;
+}
+
 export default function useGameLogic({ solution }: { solution: string }) {
   const [turn, setTurn] = useState<number>(0);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [formattedGuesses, setFormattedGuesses] = useState([
-    ...Array(solution.length),
+    ...Array(8).fill(""),
   ]); //array of an array of letter objects [[{stuff},{stuff}],[{stuff},{stuff}]]
   const [guessHistory, setGuessHistory] = useState<string[]>([]); //array of strings
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -111,6 +116,7 @@ export default function useGameLogic({ solution }: { solution: string }) {
     });
 
     setGuessHistory((prev) => {
+      console.log(guessHistory);
       return [...prev, currentGuess];
     });
 
@@ -121,5 +127,12 @@ export default function useGameLogic({ solution }: { solution: string }) {
     setTurn((prev) => prev + 1);
   };
 
-  return { turn, currentGuess, guessHistory, isCorrect, handleKeyboardInput };
+  return {
+    turn,
+    currentGuess,
+    guessHistory,
+    formattedGuesses,
+    isCorrect,
+    handleKeyboardInput,
+  };
 }
