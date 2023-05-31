@@ -1,17 +1,19 @@
 import { useState } from "react";
 
-type solutionArray = (string | null)[];
-
-interface formattedGuesses {
-  letter?: string;
-  result?: string;
-}
-
 export default function useGameLogic({ solution }: { solution: string }) {
   const [turn, setTurn] = useState<number>(0);
   const [currentGuess, setCurrentGuess] = useState<string>("");
-  const [formattedGuesses, setFormattedGuesses] = useState([
-    ...Array(8).fill(""),
+  const [formattedGuesses, setFormattedGuesses] = useState<formattedGuesses>([
+    ...Array(8).fill([
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+      { key: "", result: "" },
+    ]),
   ]); //array of an array of letter objects [[{stuff},{stuff}],[{stuff},{stuff}]]
   const [guessHistory, setGuessHistory] = useState<string[]>([]); //array of strings
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -29,7 +31,7 @@ export default function useGameLogic({ solution }: { solution: string }) {
 
     let solutionArray: solutionArray = [...solution];
 
-    let formattedGuess = [...currentGuess].map((letter) => {
+    let formattedGuess: formattedGuess = [...currentGuess].map((letter) => {
       return { key: letter, result: "absent" };
     });
 
@@ -44,7 +46,7 @@ export default function useGameLogic({ solution }: { solution: string }) {
     //second pass finds remaining letters and marks them as close
     formattedGuess.forEach((letter, i) => {
       if (solutionArray.includes(letter.key) && letter.result !== "correct") {
-        letter.result = "close";
+        formattedGuess[i].result = "close";
         solutionArray[solutionArray.indexOf(letter.key)] = null;
       }
     });
@@ -86,7 +88,6 @@ export default function useGameLogic({ solution }: { solution: string }) {
       //if guess passes validation, commit guess
       if (validateGuess()) {
         commitGuess();
-        console.log("current guess is valid 8 letter word");
       }
       return;
     }
@@ -106,6 +107,7 @@ export default function useGameLogic({ solution }: { solution: string }) {
     if (currentGuess === solution) {
       // GAME OVER DUDE
       setIsCorrect(true);
+      console.log("you won");
     }
 
     const formattedGuess = formatGuess();
