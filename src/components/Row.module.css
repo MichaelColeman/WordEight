@@ -1,5 +1,26 @@
 .row {
+  display: flex;
+  gap: 8px;
+  border: 1px solid palevioletred;
+  justify-content: center;
 }
 
 .tile {
+  display: flex;
+  color: white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 2px solid #3a3a3c;
+  max-width: 42px;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.text {
+  padding: 3px;
 }

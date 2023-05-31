@@ -3,9 +3,13 @@ import styles from "./Row.module.css";
 const Row = ({ guess }) => {
   if (guess) {
     return (
-      <div className={styles.tile}>
+      <div className={styles.row}>
         {guess.map((guess, i) => {
-          return <div key={i}>{guess.key}</div>;
+          return (
+            <div className={styles.tile} key={i}>
+              <span>{guess.key}</span>
+            </div>
+          );
         })}
       </div>
     );
@@ -13,14 +17,30 @@ const Row = ({ guess }) => {
 
   return (
     <div className={styles.row}>
-      <div className={styles.tile}>1</div>
-      <div className={styles.tile}>2</div>
-      <div className={styles.tile}>3</div>
-      <div className={styles.tile}>4</div>
-      <div className={styles.tile}>5</div>
-      <div className={styles.tile}>6</div>
-      <div className={styles.tile}>7</div>
-      <div className={styles.tile}>8</div>
+      <div className={styles.tile}>
+        <span className={styles.text}>1</span>
+      </div>
+      <div className={styles.tile}>
+        <span className={styles.text}>2</span>
+      </div>
+      <div className={styles.tile}>
+        <span className={styles.text}>3</span>
+      </div>
+      <div className={styles.tile}>
+        <span className={styles.text}>4</span>
+      </div>
+      <div className={styles.tile}>
+        <span className={styles.text}>5</span>
+      </div>
+      <div className={styles.tile}>
+        <span className={styles.text}>6</span>
+      </div>
+      <div className={styles.tile}>
+        <span>7</span>
+      </div>
+      <div className={styles.tile}>
+        <span>8</span>
+      </div>
     </div>
   );
 };

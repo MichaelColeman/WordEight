@@ -19,12 +19,12 @@ const Aardvark: React.FunctionComponent<solutionProps> = ({ solution }) => {
 
   return (
     <>
-      <div className="text-xl text-blue-500">{currentGuess}</div>
       <Board
         currentGuess={currentGuess}
         formattedGuesses={formattedGuesses}
         turn={turn}
       />
+      <div className="text-xl text-blue-500">{currentGuess}</div>
     </>
   );
 };
