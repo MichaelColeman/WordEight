@@ -1,6 +1,11 @@
-type RowProps = { formattedGuess: formattedGuess } | { currentGuess: string };
+import React from "react";
 
-const Row = ({ formattedGuess, currentGuess }: { formattedGuess: formattedGuess; currentGuess?: string }) => {
+interface RowProps {
+    formattedGuess: formattedGuess;
+    currentGuess?: string;
+}
+
+const Row: React.FunctionComponent<RowProps> = ({ formattedGuess, currentGuess }) => {
     if (formattedGuess[0].result) {
         return (
             <div className={`flex justify-center gap-1`}>

@@ -6,9 +6,7 @@ declare global {
         result: string;
         animationDelay: string;
     };
-
     type formattedGuess = Array<formattedLetter>;
-
     type formattedGuesses = Array<formattedGuess>;
 
     interface solutionProps {
