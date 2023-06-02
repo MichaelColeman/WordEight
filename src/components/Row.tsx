@@ -1,14 +1,16 @@
-import styles from "./Row.module.css";
-
 type RowProps = { formattedGuess: formattedGuess } | { currentGuess: string };
 
 const Row = ({ formattedGuess, currentGuess }: { formattedGuess: formattedGuess; currentGuess?: string }) => {
     if (formattedGuess[0].result) {
         return (
-            <div className={styles.row}>
+            <div className={`flex justify-center gap-1`}>
                 {formattedGuess.map((letter, i) => {
                     return (
-                        <div className={`${styles.tile} ${letter.result}`} key={i}>
+                        <div
+                            className={`tile ${letter.result}`}
+                            style={{ animationDelay: `${letter.animationDelay}` }}
+                            key={i}
+                        >
                             <span>{letter.key}</span>
                         </div>
                     );
@@ -23,43 +25,51 @@ const Row = ({ formattedGuess, currentGuess }: { formattedGuess: formattedGuess;
             letterArray.push("");
         }
         return (
-            <div className={styles.row}>
+            <div className={`flex justify-center gap-1`}>
                 {letterArray.map((letter, i) => {
-                    return (
-                        <div className={styles.tile} key={i}>
-                            <span>{letter}</span>
-                        </div>
-                    );
+                    if (letter) {
+                        return (
+                            <div className={`tile filled`} key={i}>
+                                <span>{letter}</span>
+                            </div>
+                        );
+                    } else {
+                        return (
+                            <div className={`tile`} key={i}>
+                                <span>{letter}</span>
+                            </div>
+                        );
+                    }
                 })}
             </div>
         );
     }
 
     return (
-        <div className={styles.row}>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+        <div className={`flex justify-center gap-1`}>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span className={styles.text}></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
-            <div className={styles.tile}>
-                <span></span>
+            <div className={`tile`}>
+                <span className={"text"}></span>
             </div>
         </div>
     );
