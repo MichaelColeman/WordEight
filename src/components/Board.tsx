@@ -11,7 +11,7 @@ type BoardProps = {
 const Board = ({ currentGuess, formattedGuesses, turn }: BoardProps) => {
     console.table(formattedGuesses);
     return (
-        <div className={styles.board}>
+        <div className={`flex flex-col gap-1`}>
             {formattedGuesses.map((formattedGuess, i) => {
                 if (turn === i) {
                     return <Row key={i} formattedGuess={formattedGuess} currentGuess={currentGuess} />;
