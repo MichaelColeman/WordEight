@@ -5,100 +5,100 @@
 :root,
 .root,
 #doc-root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 @layer base {
-    body {
-        background-color: #121213;
-        color: whitesmoke;
-    }
+  body {
+    background-color: #121213;
+    color: whitesmoke;
+  }
 }
 
 .tile {
-    display: flex;
-    color: white;
-    flex-grow: 1;
-    flex-shrink: 1;
-    border: 2px solid #3a3a3c;
-    max-width: 42px;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1;
-    text-transform: uppercase;
+  display: flex;
+  color: white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 2px solid #3a3a3c;
+  max-width: 42px;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .filled {
-    animation: pop 0.5s ease forwards;
+  animation: pop 0.5s ease forwards;
 }
 
 .text {
-    padding: 3px;
+  padding: 3px;
 }
 
 div.correct {
-    --border-color: #538d4e;
-    --background-color: #538d4e;
-    animation: flip 0.5s ease forwards;
+  --border-color: #538d4e;
+  --background-color: #538d4e;
+  animation: flip 0.5s ease forwards;
 }
 
 div.close {
-    --border-color: #b59f3b;
-    --background-color: #b59f3b;
-    animation: flip 0.5s ease forwards;
+  --border-color: #b59f3b;
+  --background-color: #b59f3b;
+  animation: flip 0.5s ease forwards;
 }
 
 div.absent {
-    --border-color: #3a3a3c;
-    --background-color: #3a3a3c;
-    animation: flip 0.5s ease forwards;
+  --border-color: #3a3a3c;
+  --background-color: #3a3a3c;
+  animation: flip 0.5s ease forwards;
 }
 
 @keyframes flip {
-    0% {
-        transform: rotateX(0deg);
-        background: transparent;
-    }
+  0% {
+    transform: rotateX(0deg);
+    background: transparent;
+  }
 
-    45% {
-        transform: rotateX(90deg);
-        background: transparent;
-    }
+  45% {
+    transform: rotateX(90deg);
+    background: transparent;
+  }
 
-    55% {
-        transform: rotateX(90deg);
-    }
+  55% {
+    transform: rotateX(90deg);
+  }
 
-    100% {
-        transform: rotateX(0deg);
-        background: var(--background-color);
-        border-color: var(--border-color);
-    }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background-color);
+    border-color: var(--border-color);
+  }
 }
 
 @keyframes pop {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    15% {
-        transform: scale(1.2);
-    }
+  15% {
+    transform: scale(1.2);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
