@@ -49,6 +49,24 @@
   padding: 3px;
 }
 
+button.correct {
+  border-color: #538d4e;
+  background-color: #538d4e;
+  transition: all 0.2s ease-in;
+}
+
+button.close {
+  border-color: #b59f3b;
+  background-color: #b59f3b;
+  transition: all 0.2s ease-in;
+}
+
+button.absent {
+  border-color: #3a3a3c;
+  background-color: #3a3a3c;
+  transition: all 0.2s ease-in;
+}
+
 div.correct {
   --border-color: #538d4e;
   --background-color: #538d4e;

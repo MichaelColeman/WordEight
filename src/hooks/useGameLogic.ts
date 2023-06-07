@@ -17,6 +17,7 @@ export default function useGameLogic({ solution }: solutionProps) {
   ]); //array of an array of letter objects [[{stuff},{stuff}],[{stuff},{stuff}]]
   const [guessHistory, setGuessHistory] = useState<string[]>([]); //array of strings
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  const [usedKeys, setUsedKeys] = useState<usedKeys>({});
 
   //returns true if guess is a correctly spelled word
   const validateGuess = (): boolean => {
@@ -123,6 +124,30 @@ export default function useGameLogic({ solution }: solutionProps) {
       return [...prev, currentGuess];
     });
 
+    setUsedKeys((prev) => {
+      let newKeys = { ...prev };
+
+      formattedGuess.forEach((letter) => {
+        const currentColor = newKeys[letter.key];
+
+        if (letter.result === "correct") {
+          newKeys[letter.key] = "correct";
+          return;
+        }
+
+        if (letter.result === "close" && currentColor !== "correct") {
+          newKeys[letter.key] = "close";
+          return;
+        }
+
+        if (letter.result === "absent" && currentColor !== "correct" && currentColor != "close") {
+          newKeys[letter.key] = "absent";
+          return;
+        }
+      });
+
+      return newKeys;
+    });
     //reset current guess to empty
     setCurrentGuess("");
 
@@ -136,6 +161,7 @@ export default function useGameLogic({ solution }: solutionProps) {
     guessHistory,
     formattedGuesses,
     isCorrect,
+    usedKeys,
     handleKeyboardInput,
   };
 }

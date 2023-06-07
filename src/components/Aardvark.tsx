@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Board from "./GameBoard";
+import GameBoard from "./GameBoard";
 import Keyboard from "./Keyboard";
 import useGameLogic from "@/hooks/useGameLogic";
 
 const Aardvark = ({ solution }: solutionProps) => {
-  const { currentGuess, handleKeyboardInput, formattedGuesses, turn } = useGameLogic({ solution });
+  const { currentGuess, handleKeyboardInput, usedKeys, formattedGuesses, turn } = useGameLogic({ solution });
 
   useEffect(() => {
     window.addEventListener("keyup", handleKeyboardInput);
@@ -13,8 +13,8 @@ const Aardvark = ({ solution }: solutionProps) => {
 
   return (
     <>
-      <Board currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
-      <Keyboard />
+      <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
+      <Keyboard usedKeys={usedKeys} />
     </>
   );
 };

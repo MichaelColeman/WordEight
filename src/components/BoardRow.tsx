@@ -1,11 +1,11 @@
 import React from "react";
 
-interface BoardRowProps {
+type BoardRowProps = {
   formattedGuess: formattedGuess;
   currentGuess?: string;
-}
+};
 
-const BoardRow: React.FunctionComponent<BoardRowProps> = ({ formattedGuess, currentGuess }) => {
+const BoardRow = ({ formattedGuess, currentGuess }: BoardRowProps) => {
   if (formattedGuess[0].result) {
     return (
       <div className={`flex justify-center gap-1`}>
