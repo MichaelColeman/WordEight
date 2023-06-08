@@ -49,6 +49,7 @@
   padding: 3px;
 }
 
+/* adds colors the keyboard */
 button.correct {
   border-color: #538d4e;
   background-color: #538d4e;
@@ -67,6 +68,7 @@ button.absent {
   transition: all 0.2s ease-in 1.8s;
 }
 
+/* adds colors to the game board */
 div.correct {
   --border-color: #538d4e;
   --background-color: #538d4e;
