@@ -55,20 +55,15 @@ export default function useGameLogic({ solution }: solutionProps) {
     return formattedGuess;
   };
 
-  //add new guess to guesses state
-  //if the guess is correct, update isCorrect state to true
-  //if guess is incorrect, increment turn number state
-  const addGuess = () => {};
-
   const handleKeyboardInput = ({ key }: KeyboardEvent) => {
-    if (key === "Backspace") {
+    if (key === "Backspace" || key === "back") {
       setCurrentGuess((prev) => {
         return prev.slice(0, -1);
       });
       return;
     }
 
-    if (key === "Enter") {
+    if (key.toLowerCase() === "enter") {
       //return if turns are more than 8 (indicating that the game is over)
       if (turn > solution.length) {
         console.log("turn > solution.length");
