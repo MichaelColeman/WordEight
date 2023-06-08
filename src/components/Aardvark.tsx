@@ -15,8 +15,8 @@ const Aardvark = ({ solution }: solutionProps) => {
       console.log("you've won!");
       window.removeEventListener("keyup", handleKeyboardInput);
     }
-
-    if (turn > 8) {
+    console.log(turn);
+    if (turn > 7) {
       setTimeout(() => setShowEndGameModal(true), 2500);
       console.log("out of turns!");
       window.removeEventListener("keyup", handleKeyboardInput);
