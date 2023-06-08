@@ -26,11 +26,11 @@ const Aardvark = ({ solution }: solutionProps) => {
   }, [handleKeyboardInput, isCorrect, turn]);
 
   return (
-    <>
+    <div className="mt-20">
       <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
       <Keyboard usedKeys={usedKeys} />
       {showEndGameModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
-    </>
+    </div>
   );
 };
 

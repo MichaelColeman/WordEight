@@ -19,9 +19,18 @@
 }
 
 @layer base {
+  #__next {
+    height: 100vh;
+  }
+
+  html {
+    height: 100%;
+  }
+
   body {
     background-color: #121213;
     color: whitesmoke;
+    min-height: 100%;
   }
 }
 
