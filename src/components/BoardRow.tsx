@@ -8,7 +8,7 @@ type BoardRowProps = {
 const BoardRow = ({ formattedGuess, currentGuess }: BoardRowProps) => {
   if (formattedGuess[0].result) {
     return (
-      <div className={`flex justify-center gap-1`}>
+      <div className="flex justify-center gap-1">
         {formattedGuess.map((letter, i) => {
           return (
             <div className={`tile ${letter.result}`} style={{ animationDelay: `${letter.animationDelay}` }} key={i}>
