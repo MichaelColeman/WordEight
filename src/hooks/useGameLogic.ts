@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function useGameLogic({ solution }: solutionProps) {
+type Props = {
+  solution: string;
+};
+
+export default function useGameLogic({ solution }: Props) {
   const [turn, setTurn] = useState<number>(0);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [formattedGuesses, setFormattedGuesses] = useState<formattedGuesses>([
