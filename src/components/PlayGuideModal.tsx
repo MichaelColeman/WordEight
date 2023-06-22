@@ -15,7 +15,7 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
       onClick={handleButtonClick}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 text-white"
     >
-      <div className=" my-5 w-5/6 overflow-hidden rounded-lg bg-neutral-900 pl-12 pr-6 md:w-4/6 lg:w-1/2 xl:w-2/6">
+      <div className=" my-5 w-5/6 overflow-hidden rounded-lg bg-neutral-900 pl-10 pr-6 md:w-4/6 lg:w-1/2 xl:w-2/6">
         <div className="flex justify-end pt-6">
           <Image
             onClick={handleButtonClick}
@@ -26,9 +26,9 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
           />
         </div>
         <h1 className="pb-1 text-4xl font-bold">How To Play</h1>
-        <h2 className="pb-2 text-3xl font-thin">Guess the word in 8 tries</h2>
-        <div className="mb-10 h-2 w-3/4 rounded-sm bg-green-700"></div>
-        <ul className="list-disc pb-10 pl-5 text-lg lg:text-xl">
+        <h2 className="pb-2 text-2xl font-thin">Guess the word in 8 tries</h2>
+        <div className="mb-10 h-1 w-3/4 rounded-sm bg-green-700"></div>
+        <ul className="list-disc pb-10 pl-5 lg:text-xl">
           <li className="pb-2">Each guess must be a valid 8 letter word.</li>
           <li>The color of the tiles will change to show how close your guess was to the word.</li>
         </ul>
