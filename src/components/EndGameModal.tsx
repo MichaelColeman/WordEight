@@ -12,7 +12,7 @@ const EndGameModal = ({ isCorrect, turn, solution }: props) => {
           <div className="flex flex-col items-center gap-2 ">
             <h1 className=" text-3xl font-bold uppercase tracking-wider text-green-500">You Win</h1>
             <div className=" w-[90%] border-b border-emerald-300"></div>
-            <p className="text-base">You have won in {turn} Guesses!</p>
+            <p className="text-base">You have won in {turn} guesses!</p>
             <p className="solution text-lg tracking-widest text-emerald-300 ">{solution.toUpperCase()}</p>
           </div>
         )}
