@@ -17,7 +17,7 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
     >
       <div className=" my-5 w-5/6 overflow-hidden rounded-lg bg-neutral-900 pl-6 pr-6 md:w-4/6 md:pl-10 lg:w-1/2 xl:w-2/6">
         <div className="flex justify-between pt-6">
-          <h1 className="pb-1 text-4xl font-bold">How To Play</h1>
+          <h1 className="text-4xl font-bold">How To Play</h1>
           <Image
             onClick={handleButtonClick}
             src={roundedCloseButton}
@@ -26,7 +26,7 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
             alt="close how to play modal"
           />
         </div>
-        <h2 className="pb-2 text-2xl font-thin">Guess the word in 8 tries</h2>
+        <h2 className="pb-1 text-xl font-thin">Guess the word in 8 tries</h2>
         <div className="mb-10 h-1 w-3/4 rounded-sm bg-green-700"></div>
         <ul className="list-disc pb-10 pl-5 lg:text-xl">
           <li className="pb-2">Each guess must be a valid 8 letter word.</li>
