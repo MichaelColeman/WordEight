@@ -11,10 +11,6 @@ declare global {
 
   type solutionArray = (string | null)[];
 
-  type solutionProps = {
-    solution: string;
-  };
-
   type keyboardKeys = {
     row1: string[];
     row2: string[];

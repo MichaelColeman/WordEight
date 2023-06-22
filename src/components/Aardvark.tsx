@@ -4,7 +4,11 @@ import Keyboard from "./Keyboard";
 import useGameLogic from "@/hooks/useGameLogic";
 import Modal from "./EndGameModal";
 
-const Aardvark = ({ solution }: solutionProps) => {
+type Props = {
+  solution: string;
+};
+
+const Aardvark = ({ solution }: Props) => {
   const { currentGuess, handleKeyboardInput, usedKeys, isCorrect, formattedGuesses, turn } = useGameLogic({ solution });
   const [showEndGameModal, setShowEndGameModal] = useState<boolean>(false);
 
