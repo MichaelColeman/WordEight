@@ -15,7 +15,7 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
       onClick={handleButtonClick}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 text-white"
     >
-      <div className="w-5/6 overflow-hidden rounded-lg bg-neutral-900 pl-12 pr-6 md:w-4/6 lg:w-1/2 xl:w-2/6">
+      <div className=" my-5 w-5/6 overflow-hidden rounded-lg bg-neutral-900 pl-12 pr-6 md:w-4/6 lg:w-1/2 xl:w-2/6">
         <div className="flex justify-end pt-6">
           <Image
             onClick={handleButtonClick}
