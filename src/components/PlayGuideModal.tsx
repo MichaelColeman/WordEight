@@ -27,22 +27,22 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
         </div>
         <h1 className="pb-1 text-4xl font-bold">How To Play</h1>
         <h2 className="pb-2 text-3xl font-thin">Guess the word in 8 tries</h2>
-        <div className="mb-12 h-2 w-3/4 rounded-sm bg-green-700"></div>
-        <ul className="list-disc pb-14 pl-5 text-lg lg:text-xl">
+        <div className="mb-10 h-2 w-3/4 rounded-sm bg-green-700"></div>
+        <ul className="list-disc pb-10 pl-5 text-lg lg:text-xl">
           <li className="pb-2">Each guess must be a valid 8 letter word.</li>
           <li>The color of the tiles will change to show how close your guess was to the word.</li>
         </ul>
         <p className="pb-4 text-2xl font-bold">Examples</p>
         <Image className="pb-2" src={modalExampleOne} alt="the word mountain with the letter t highlighted green" />
-        <p className="pb-10">
+        <p className="pb-8">
           <b>T</b> is in the word and is in the correct place.
         </p>
         <Image className="pb-2" src={modalExampleTwo} alt="the word mountain with the letter t highlighted green" />
-        <p className="pb-10">
+        <p className="pb-8">
           <b>B</b> is in the word but is in the wrong place.
         </p>
         <Image className="pb-2" src={modalExampleThree} alt="the word mountain with the letter t highlighted green" />
-        <p className="pb-10">
+        <p className="pb-8">
           <b>T</b> is not in the word in any place.
         </p>
       </div>
