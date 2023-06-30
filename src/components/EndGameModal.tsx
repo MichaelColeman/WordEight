@@ -10,17 +10,17 @@ const EndGameModal = ({ isCorrect, turn, solution }: props) => {
       <div className="flex h-[200px] w-[75vw] items-center justify-center rounded-lg bg-slate-700 bg-opacity-95 md:w-[400px]">
         {isCorrect && (
           <div className="flex flex-col items-center gap-2 ">
-            <h1 className=" text-3xl font-bold uppercase tracking-wider text-green-500">You Win</h1>
-            <div className=" w-[90%] border-b border-emerald-300"></div>
+            <h1 className="text-3xl font-bold uppercase tracking-wider text-green-500">You Win</h1>
+            <div className="w-[90%] border-b border-emerald-300"></div>
             <p className="text-base">You have won in {turn} guesses!</p>
-            <p className="solution text-lg tracking-widest text-emerald-300 ">{solution.toUpperCase()}</p>
+            <p className="solution text-lg tracking-widest text-emerald-300">{solution.toUpperCase()}</p>
           </div>
         )}
 
         {!isCorrect && (
           <div className="flex flex-col items-center gap-2 ">
-            <h1 className=" text-3xl font-bold uppercase tracking-wider text-rose-500">sorry!</h1>
-            <div className=" w-[90%] border-b border-rose-300"></div>
+            <h1 className="text-3xl font-bold uppercase tracking-wider text-rose-500">sorry!</h1>
+            <div className="w-[90%] border-b border-rose-300"></div>
             <p className="text-base">You have used up all of your guesses!</p>
             <p className="solution text-lg tracking-widest text-rose-300 ">{solution.toUpperCase()}</p>
           </div>

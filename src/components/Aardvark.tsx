@@ -30,7 +30,7 @@ const Aardvark = ({ solution }: Props) => {
   }, [handleKeyboardInput, isCorrect, turn]);
 
   return (
-    <div className="mt-10">
+    <div>
       <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
       <Keyboard usedKeys={usedKeys} />
       {showEndGameModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
