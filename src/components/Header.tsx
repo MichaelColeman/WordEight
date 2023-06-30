@@ -36,8 +36,8 @@ export default function Header() {
             <button onClick={handleButtonClick}>
               <Image
                 src={helpcircle}
-                height={48}
-                width={48}
+                height={40}
+                width={40}
                 alt="how to play"
                 className="rounded-full hover:bg-slate-500"
               />
