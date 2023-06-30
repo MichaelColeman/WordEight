@@ -16,7 +16,7 @@ const bodoniModa = Bodoni_Moda({
 })
 
 export default function Header() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const handleButtonClick = () => {
     setShowModal(!showModal);
