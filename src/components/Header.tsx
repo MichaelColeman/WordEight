@@ -1,14 +1,8 @@
 import { useState } from "react";
-import { Roboto_Slab } from "next/font/google";
 import { Bodoni_Moda } from "next/font/google";
 import Image from "next/image";
 import helpcircle from "@/images/helpcircle.svg";
 import PlayGuideModal from "@/components/PlayGuideModal";
-
-const robotoSlab = Roboto_Slab({
-  subsets: ["latin"],
-  fallback: ['system-ui', 'arial']
-});
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
