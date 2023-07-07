@@ -10,10 +10,22 @@ const KeyboardKey = ({ data, result }: KeyboardKeyProps) => {
     window.dispatchEvent(keyboardEvent);
   };
 
+  if (data.toLowerCase() === "enter" || data.toLowerCase() === "back") {
+    return (
+      <button
+        onClick={() => handleClick(data)}
+        className={`${result} flex-grow rounded bg-amber-300 font-bold uppercase text-slate-950`}
+        key={data}
+      >
+        {data}
+      </button>
+    );
+  }
+
   return (
     <button
       onClick={() => handleClick(data)}
-      className={`${result} flex-grow rounded bg-gray-500 font-bold uppercase text-white`}
+      className={`${result} flex-grow rounded bg-gray-600 font-bold uppercase text-white`}
       key={data}
     >
       {data}

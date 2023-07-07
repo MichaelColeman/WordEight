@@ -7,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).json({ error: "Method not allowed" });
       return;
     }
-    res.status(200).json({ solution: "baseball" });
+    res.status(200).json({ solution: "economic" });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Internal server error" });
