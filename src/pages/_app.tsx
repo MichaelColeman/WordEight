@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 /*
 The default export of _app.js is a top-level React component that wraps all the pages in your application.
@@ -8,5 +9,10 @@ or to add global styles as we're doing here.
 */
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />;
+      <Analytics />
+    </>
+  );
 }
