@@ -119,7 +119,7 @@ export default function useGameLogic({ solution }: Props) {
     });
 
     setGuessHistory((prev) => {
-      console.log(guessHistory);
+      // console.log(guessHistory);
       return [...prev, currentGuess];
     });
 
