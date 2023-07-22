@@ -1,27 +1,31 @@
 import fs from "fs";
 import csv from "csv-parser";
+import { PrismaClient } from "@prisma/client";
 
 type row = {
   word: string;
   liveDate: Date;
 };
 
+const prisma = new PrismaClient();
+
 async function seed() {
   try {
-    const data: row[] = [];
+    const rows: row[] = [];
     fs.createReadStream("prisma/wordeightmasterlist.csv")
       .pipe(csv(["word", "liveDate"]))
-      .on("data", (row: row) => data.push(row))
+      .on("data", (row: row) => rows.push(row))
       .on("end", async () => {
-        for (const row of data) {
-          console.log(row);
-        }
+        const createMany = await prisma.word.createMany({
+          data: rows,
+          skipDuplicates: true,
+        });
+        console.log("Seeded data", createMany);
       });
-    console.log("Data console logged successfully");
   } catch (error) {
     console.log("Error seeding data", error);
   } finally {
-    // await prisma.$disconnect();
+    await prisma.$disconnect();
   }
 }
 
