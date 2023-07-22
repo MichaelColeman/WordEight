@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Aardvark from "@/components/Aardvark";
 
 export default function Home() {
-  const [solution, setSolution] = useState<string>("loading...");
+  const [solution, setSolution] = useState<string>("loadingg");
 
   useEffect(() => {
     fetch("/api/Solution")
