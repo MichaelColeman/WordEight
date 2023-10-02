@@ -3,6 +3,13 @@ import GameBoard from "./GameBoard";
 import Keyboard from "./Keyboard";
 import useGameLogic from "@/hooks/useGameLogic";
 import Modal from "./EndGameModal";
+import { Roboto_Mono } from "next/font/google";
+
+const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  //display: 'swap',
+  variable: "--font-roboto-mono",
+});
 
 type Props = {
   solution: string;
@@ -30,7 +37,7 @@ const Aardvark = ({ solution }: Props) => {
   }, [handleKeyboardInput, isCorrect, turn]);
 
   return (
-    <div>
+    <div className={`${roboto_mono.variable}`}>
       <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
       <Keyboard usedKeys={usedKeys} />
       {showEndGameModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}

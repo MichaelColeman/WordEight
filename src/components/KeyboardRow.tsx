@@ -8,7 +8,7 @@ type KeyboardRowProps = {
 const KeyboardRow = ({ rowLetters, usedKeys }: KeyboardRowProps) => {
   return (
     <>
-      <div className="mb-1 flex h-[40px] flex-nowrap gap-1">
+      <div className="mb-[3px] flex h-[40px] flex-nowrap gap-[3px]">
         {rowLetters.map((letter) => {
           let result = "";
           if (usedKeys[letter]) {

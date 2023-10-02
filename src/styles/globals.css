@@ -24,13 +24,22 @@
   }
 
   html {
-    height: 100%;
+    height: 100vh;
   }
 
   body {
-    background-color: #0b0d18;
-    color: whitesmoke;
-    min-height: 100%;
+    background: rgb(8, 12, 9);
+    background: linear-gradient(
+      150deg,
+      rgba(8, 12, 9, 1) 0%,
+      rgba(15, 20, 30, 1) 45%,
+      rgba(15, 20, 30, 1) 54%,
+      rgba(37, 24, 27, 1) 60%,
+      rgba(7, 11, 8, 1) 68%,
+      rgba(8, 12, 9, 1) 100%
+    );
+    color: white;
+    min-height: 100vh;
   }
 }
 
@@ -39,7 +48,7 @@
   color: white;
   flex-grow: 1;
   flex-shrink: 1;
-  border: 1px solid #3a3a3c;
+  border: 1px solid #494949;
   max-width: 44px;
   justify-content: center;
   align-items: center;
@@ -60,39 +69,44 @@
 
 /* adds colors the keyboard */
 button.correct {
-  border-color: #538d4e;
+  box-shadow: inset 0px 0px 4px 0px rgba(18, 107, 0, 0.75);
+  border: 1px solid #76db7d;
   background-color: #538d4e;
+  color: black;
   transition: all 0.2s ease-in 1.8s;
 }
 
 button.close {
-  border-color: #b59f3b;
-  background-color: #b59f3b;
+  box-shadow: inset 0px 0px 4px 0px rgba(126, 107, 0, 0.75);
+  border: 1px solid #ffef85;
+  background-color: #ffdd00;
+  color: black;
   transition: all 0.2s ease-in 1.8s;
 }
 
 button.absent {
-  border-color: #3a3a3c;
-  background-color: #3a3a3c;
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid #292929;
+  background-color: rgba(31, 31, 31, 0.75);
   transition: all 0.2s ease-in 1.8s;
 }
 
 /* adds colors to the game board */
 div.correct {
-  --border-color: #538d4e;
-  --background-color: #538d4e;
+  --border-color: #76db7d;
+  --background-color: #4d8e52;
   animation: flip 0.5s ease forwards;
 }
 
 div.close {
-  --border-color: #b59f3b;
-  --background-color: #b59f3b;
+  --border-color: #ffef85;
+  --background-color: #d2b600;
   animation: flip 0.5s ease forwards;
 }
 
 div.absent {
-  --border-color: #3a3a3c;
-  --background-color: #3a3a3c;
+  --border-color: #2e2e30;
+  --background-color: #2e2e30;
   animation: flip 0.5s ease forwards;
 }
 
