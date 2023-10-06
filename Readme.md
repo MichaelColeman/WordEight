@@ -1,7 +1,7 @@
 
 <div align="center">
 <h1 align="center">
-<img src="./public/favicon.ico" width="100" style="border: 1px solid grey; border-radius: 50%" />
+<img src="./src/images/logo.png" width="100" />
 <br>
 Word Eight
 <h5 align="center">📍 A word guessing game inspired by Wordle!</h3>
