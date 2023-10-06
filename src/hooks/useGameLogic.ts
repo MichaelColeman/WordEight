@@ -60,7 +60,7 @@ export default function useGameLogic({ solution }: Props) {
   };
 
   const handleKeyboardInput = ({ key }: KeyboardEvent) => {
-    if (key === "Backspace" || key === "back") {
+    if (key === "Backspace" || key === "Back") {
       setCurrentGuess((prev) => {
         return prev.slice(0, -1);
       });

@@ -14,7 +14,7 @@ const KeyboardKey = ({ data, result }: KeyboardKeyProps) => {
     return (
       <button
         onClick={() => handleClick(data)}
-        className={`${result} flex-grow rounded bg-neutral-700 font-semibold text-white shadow-[inset_0px_0px_4px_0px_rgba(100,100,100,0.5)]`}
+        className={`${result} flex-grow rounded bg-neutral-700 font-semibold shadow-[inset_0px_0px_4px_0px_rgba(100,100,100,0.5)]`}
         key={data}
       >
         {data}
@@ -25,7 +25,7 @@ const KeyboardKey = ({ data, result }: KeyboardKeyProps) => {
   return (
     <button
       onClick={() => handleClick(data)}
-      className={`${result} flex-grow rounded bg-neutral-700 font-semibold uppercase text-white shadow-[inset_0px_0px_4px_0px_rgba(100,100,100,0.5)]`}
+      className={`${result} flex-grow rounded bg-neutral-700 font-semibold uppercase shadow-[inset_0px_0px_4px_0px_rgba(100,100,100,0.5)]`}
       key={data}
     >
       {data}

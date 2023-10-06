@@ -4,6 +4,7 @@ import Keyboard from "./Keyboard";
 import useGameLogic from "@/hooks/useGameLogic";
 import Modal from "./EndGameModal";
 import { Roboto_Mono } from "next/font/google";
+import { Helmet } from "react-helmet";
 
 const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
@@ -37,11 +38,18 @@ const Aardvark = ({ solution }: Props) => {
   }, [handleKeyboardInput, isCorrect, turn]);
 
   return (
-    <div className={`${roboto_mono.variable}`}>
-      <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
-      <Keyboard usedKeys={usedKeys} />
-      {showEndGameModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
-    </div>
+    <>
+      <Helmet>
+        <link rel="icon" href="/favicon.ico" sizes="32x32"></link>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml"></link>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+      </Helmet>
+      <div className={`${roboto_mono.variable}`}>
+        <GameBoard currentGuess={currentGuess} formattedGuesses={formattedGuesses} turn={turn} />
+        <Keyboard usedKeys={usedKeys} />
+        {showEndGameModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
+      </div>
+    </>
   );
 };
 

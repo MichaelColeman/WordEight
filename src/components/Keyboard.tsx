@@ -12,7 +12,7 @@ const keyboardKeys: keyboardKeys = {
 
 const Keyboard = ({ usedKeys }: keyboardProps) => {
   return (
-    <div className="center opacity-0.75 mx-auto max-w-[95vw] flex-col font-mono md:max-w-[700px]">
+    <div className="center opacity-0.75 md:max-w-[700px] mx-auto max-w-[95vw] flex-col font-mono">
       <KeyboardRow usedKeys={usedKeys} rowLetters={keyboardKeys.row1} />
       <KeyboardRow usedKeys={usedKeys} rowLetters={keyboardKeys.row2} />
       <KeyboardRow usedKeys={usedKeys} rowLetters={keyboardKeys.row3} />

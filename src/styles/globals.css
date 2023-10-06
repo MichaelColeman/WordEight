@@ -63,16 +63,16 @@
   animation: pop 0.5s ease forwards;
 }
 
-.text {
+/* .text {
   padding: 3px;
-}
+} */
 
 /* adds colors the keyboard */
 button.correct {
   box-shadow: inset 0px 0px 4px 0px rgba(18, 107, 0, 0.75);
   border: 1px solid #76db7d;
   background-color: #538d4e;
-  color: black;
+  color: #ffffff;
   transition: all 0.2s ease-in 1.8s;
 }
 
@@ -100,7 +100,7 @@ div.correct {
 
 div.close {
   --border-color: #ffef85;
-  --background-color: #d2b600;
+  --background-color: #dabd00;
   animation: flip 0.5s ease forwards;
 }
 

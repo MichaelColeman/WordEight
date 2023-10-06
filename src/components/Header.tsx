@@ -1,13 +1,8 @@
 import { useState } from "react";
-import { Bodoni_Moda } from "next/font/google";
 import Image from "next/image";
 import helpcircle from "@/images/helpcircle.svg";
 import PlayGuideModal from "@/components/PlayGuideModal";
-
-const bodoniModa = Bodoni_Moda({
-  subsets: ["latin"],
-  fallback: ['system-ui', 'arial']
-})
+import logo from "@/images/logo.png";
 
 export default function Header() {
   const [showModal, setShowModal] = useState(false);
@@ -18,14 +13,12 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex h-24 w-full md:w-4/5 mx-auto mb-6 justify-center border-b px-10">
+      <header className="m-4 mx-auto flex h-24 w-full max-w-3xl justify-center px-10 md:w-3/5">
         <div className="flex-auto basis-2/6"></div>
-        <div className="flex-auto basis-2/6 self-center">
-          <h1 className={bodoniModa.className + " " + `text-center text-xl font-semibold text-yellow-300 md:text-2xl`}>
-            Word Eight
-          </h1>
+        <div className="flex flex-auto basis-2/6 justify-center self-center">
+          <Image src={logo} alt="word eight logo" width={125} />
         </div>
-        <div className="flex flex-auto basis-2/6 justify-end">
+        <div className="flex flex-auto basis-2/6 justify-end md:items-start">
           <div className="flex">
             <button onClick={handleButtonClick}>
               <Image
