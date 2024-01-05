@@ -32,7 +32,7 @@ export default function useGameLogic({ solution }: Props) {
   //format guess into an array of letter objects
   //[{letter: "a", result: "correct" | "close" | "absent", animationDelay: 0.3s }]
   const formatGuess = () => {
-    console.log("formatting guess:", currentGuess);
+    //console.log("formatting guess:", currentGuess);
 
     let solutionArray: solutionArray = [...solution];
 
@@ -70,7 +70,7 @@ export default function useGameLogic({ solution }: Props) {
     if (key.toLowerCase() === "enter") {
       //return if turns are more than 8 (indicating that the game is over)
       if (turn > solution.length) {
-        console.log("turn > solution.length");
+        //console.log("turn > solution.length");
         return;
       }
 

@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const today = new Date();
     today.setUTCHours(0, 0, 0, 0);
-    console.log("today: ", today.toISOString());
+    //console.log("today: ", today.toISOString());
 
     const solution = await prisma.word.findFirst({
       where: {
@@ -23,10 +23,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(404).json({ error: "No solution found" });
       return;
     }
-    console.log("solution: ", solution);
+    //console.log("solution: ", solution);
     res.status(200).json({ solution: solution.word });
   } catch (error) {
-    console.log("error: ", error);
+    //console.log("error: ", error);
     res.status(500).json({ error: "Internal server error" });
   }
 }
