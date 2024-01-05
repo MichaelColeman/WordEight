@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Aardvark from "@/components/Aardvark";
+import DonateButton from "@/components/DonateWidget";
 
 export default function Home() {
-  const [solution, setSolution] = useState<string>("loadingg");
+  const [solution, setSolution] = useState<string>("loading");
 
   useEffect(() => {
     fetch("/api/Solution")
@@ -20,6 +21,7 @@ export default function Home() {
     <>
       <Header />
       <Aardvark solution={solution} />
+      <DonateButton />
     </>
   );
 }

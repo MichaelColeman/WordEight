@@ -13,10 +13,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="m-4 mx-auto flex h-24 w-full max-w-3xl justify-center px-10 md:w-3/5">
-        <div className="flex-auto basis-2/6"></div>
+      <header className="mx-auto flex h-20 w-full max-w-3xl justify-center px-10 md:w-3/5">
+        <div className="max-h-1 flex-auto basis-2/6"></div>
         <div className="flex flex-auto basis-2/6 justify-center self-center">
-          <Image src={logo} alt="word eight logo" width={125} />
+          <Image src={logo} alt="word eight logo" width={75} />
         </div>
         <div className="flex flex-auto basis-2/6 justify-end md:items-start">
           <div className="flex">
