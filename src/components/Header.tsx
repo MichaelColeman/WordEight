@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="mx-auto flex h-20 w-full max-w-3xl justify-center px-10 md:w-3/5">
+      <header className="mx-auto flex w-full max-w-[512px] justify-center px-10 pb-2 pt-[10%]">
         <div className="max-h-1 flex-auto basis-2/6"></div>
         <div className="flex flex-auto basis-2/6 justify-center self-center">
           <Image src={logo} alt="word eight logo" width={75} />
