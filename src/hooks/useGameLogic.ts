@@ -8,9 +8,7 @@ export default function useGameLogic({ solution }: Props) {
   const [turn, setTurn] = useState<number>(0);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [formattedGuesses, setFormattedGuesses] = useState<formattedGuesses>([
-    ...Array(8).fill([
-      { key: "", result: "" },
-      { key: "", result: "" },
+    ...Array(6).fill([
       { key: "", result: "" },
       { key: "", result: "" },
       { key: "", result: "" },

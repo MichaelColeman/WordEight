@@ -26,10 +26,10 @@ const PlayGuideModal = ({ handleButtonClick }: props) => {
             alt="close how to play modal"
           />
         </div>
-        <h2 className="pb-1 text-xl font-thin">Guess the word in 8 tries</h2>
+        <h2 className="pb-1 text-xl font-thin">Guess the word in 6 tries</h2>
         <div className="mb-10 h-1 w-3/4 rounded-sm bg-green-700"></div>
         <ul className="list-disc pb-10 pl-5 lg:text-xl">
-          <li className="pb-2">Each guess must be a valid 8 letter word.</li>
+          <li className="pb-2">Each guess must be a valid 6 letter word.</li>
           <li>The color of the tiles will change to show how close your guess is to the answer!</li>
         </ul>
         <p className="pb-4 text-xl font-bold">Examples</p>
