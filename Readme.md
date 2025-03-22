@@ -37,6 +37,5 @@ Word Eight is an open source game written in TypeScript with Next.js. Players wi
 
 - [X] [📌  Add on screen keyboard]
 - [X] [📌  Create branding]
-- [ ] [📌  Pick a darn CSS system and stick with it]
 - [ ] [📌  Create Leaderboards]
 

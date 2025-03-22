@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Header />
       <Aardvark solution={solution} />
-      <DonateButton />
+      {/*<DonateButton />*/}
     </>
   );
 }
